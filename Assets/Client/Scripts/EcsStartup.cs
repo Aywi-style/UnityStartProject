@@ -10,6 +10,16 @@ namespace Client
         private GameState _gameState;
         private EcsSystems _firstSystems, _secondSystems;
 
+        [field: Space]
+        [field: SerializeField]
+        public AllPools AllPools { private set; get; }
+
+        [field: Space]
+        [field: SerializeField]
+        public AmbientType AmbientType { private set; get; }
+        [field: SerializeField]
+        public AudioMixer AudioPack { private set; get; }
+
         void Start()
         {
             _world = new EcsWorld();
